@@ -1,13 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo Home Page</title>
-</head>
-<body>
-    <h1>Welcome to payoo home page</h1>
+    <script src="https://kit.fontawesome.com/daf73e6806.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="w-[450px] bg-[#e9eaed] border mx-auto space-y-6">
+      <div class="flex justify-between items-center px-5 pt-6">
+        <div>
+          <div id="account-balance" class="text-2xl font-bold">500</div>
+          <h2 class="text-2xl font-bold">Available balance</h2>
+        </div>
+        <div>
+          <button id="logout-btn" class="btn btn-active">Logout</button>
+        </div>
+      </div>
 
-    <script src="./js/script.js"></script>
-</body>
+      <div class="divider"></div>
+
+      <div class="px-5 space-y-2">
+        <h3 class="text-2xl font-bold">Welcome to Payoo Mobile Bank!</h3>
+        <p>
+          Enjoy easy and convenient financial services with us. Cash-out charge
+          is low and
+        </p>
+      </div>
+
+      <div class="flex justify-center gap-5">
+        <div class="stats shadow cursor-pointer" id="add-money-show-btn">
+            <div class="stat text-center">
+                <i class="fa-solid fa-wallet fa-2x"></i>
+              <p class="text-xl font-bold">Add Money</p>
+            </div>
+          </div>
+
+          <div class="stats shadow cursor-pointer" id="cash-out-show-btn">
+            <div class="stat text-center">
+                <i class="fa-solid fa-dollar-sign fa-2x"></i>
+              <p class="text-xl font-bold">Cash-out</p>
+            </div>
+          </div>
+      </div>
+
+       <!-- Add money form -->
+
+       <div id="add-money-form" class="hero">
+        <div class="hero-content flex-col">
+
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="add-money-amount" type="number" placeholder="Enter Your Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="add-money-pin" type="password" placeholder="Enter Your Pin" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot Pin?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- cash-out form  -->
+
+
+      <div id="cash-out-form" class="hero hidden">
+        <div class="hero-content flex-col">
+
+          <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="cashout-amount" type="number" placeholder="Enter Your Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="cashout-pin" type="password" placeholder="Enter Your Pin" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot Pin?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-primary">Cash out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <script src="./js/add-cash-btn.js"></script>
+    <script src="./js/home.js"></script>
+
+    <script src="./js/cashout.js"></script>
+
+    <script src="./js/logout.js"></script>
+
+
+  </body>
 </html>
