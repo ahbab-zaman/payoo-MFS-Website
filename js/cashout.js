@@ -21,6 +21,14 @@ document
       document.getElementById("account-balance").innerText = currBalance;
       document.getElementById("cashout-amount").value = "";
       document.getElementById("cashout-pin").value = "";
+
+
+      const p = document.createElement("p");
+      p.innerText = `Withdrawn Money : ${newCashout} taka ; Current Balance : ${currBalance}`;
+      document.getElementById('transaction-container').appendChild(p);
+       p.style.backgroundColor = 'black'
+       p.style.color = 'white'
+
       
     }
     else{

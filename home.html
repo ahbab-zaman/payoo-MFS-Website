@@ -46,19 +46,35 @@
       </div>
 
       <div class="flex justify-center gap-5">
+
+        <!-- show add money button -->
         <div class="stats shadow cursor-pointer" id="add-money-show-btn">
-            <div class="stat text-center">
+            <div class="stat text-center p-2">
                 <i class="fa-solid fa-wallet fa-2x"></i>
               <p class="text-xl font-bold">Add Money</p>
             </div>
           </div>
 
+
+          <!-- show cash out button -->
           <div class="stats shadow cursor-pointer" id="cash-out-show-btn">
-            <div class="stat text-center">
+            <div class="stat text-center p-2">
                 <i class="fa-solid fa-dollar-sign fa-2x"></i>
               <p class="text-xl font-bold">Cash-out</p>
             </div>
           </div>
+
+          <!-- show transaction button -->
+
+          <div class="stats shadow cursor-pointer" id="transaction-show-btn">
+            <div class="stat text-center p-2">
+              <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
+              <p class="text-xl font-bold">Transaction</p>
+            </div>
+          </div>
+
+
+
       </div>
 
        <!-- Add money form -->
@@ -121,6 +137,18 @@
             </form>
           </div>
         </div>
+      </div>
+
+      <!-- Transaction history -->
+
+      <div id="transaction-history" class="hidden py-10 text-center">
+        <h1 class="text-2xl font-bold">Transaction Details :</h1>
+
+        <div id="transaction-container">
+
+        </div>
+
+
       </div>
 
 
